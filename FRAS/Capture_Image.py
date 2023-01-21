@@ -33,7 +33,7 @@ def takeImages():
     Id = input("Enter Your Id: ")
     name = input("Enter Your Name: ")
 
-    if(is_number(Id) and name.isalpha()):
+    if(is_number(Id)):
         cam = cv2.VideoCapture(0)
         harcascadePath = "haarcascade_frontalface_default.xml"
         detector = cv2.CascadeClassifier(harcascadePath)
@@ -76,8 +76,7 @@ def takeImages():
             csvFile.close()
     else:
         if(is_number(Id)):
-            print("Enter Alphabetical Name")
-        if(name.isalpha()):
             print("Enter Numeric ID")
+        
 
 
